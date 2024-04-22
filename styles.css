@@ -1,0 +1,341 @@
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Set the font family and line height for better readability */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  background-color: white;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 13px;
+}
+
+#navbar ul li {
+  margin-right: 2rem;
+}
+
+#navbar a {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+#navbar a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6b81;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+#navbar a:hover::before {
+  transform: scaleX(1);
+}
+
+#welcome-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(to right, #ff6b81, #f8b5c4);
+  color: #fff;
+  text-align: center;
+  height: auto;
+  padding-top: 100px;
+}
+
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#welcome-section h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  display: inline-block;
+  border: 1px solid #ff6b81;
+  color: #ff6b81;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #ff6b81;
+  color: #fff;
+  border-color: #ff6b81;
+}
+
+a img {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.buttons a {
+  background-color: rgb(251, 243, 243);
+}
+
+.buttons a:hover {
+  background-color: #ff6b81;
+  color: white;
+}
+
+.photo-template {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto 0;
+  background: url('ako.jpg');
+  background-size: cover;
+}
+
+#projects {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+
+}
+
+.project-info {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #ff6b81;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+  #welcome-section {
+    padding: 4rem 1rem;
+  }
+
+  #welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  #welcome-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+}
+#hobbies {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+#hobbies h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.hobby-category {
+  margin-bottom: 3rem;
+}
+
+.hobby-category h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ff6b81;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Change this line */
+  grid-gap: 2rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+.gallery-item {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 170px; /* Set a fixed width for consistency */
+  max-width: 100%; /* Ensure the card doesn't exceed its container */
+  margin: 0 auto; /* Center the card */
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item p {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #ff6b81;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .gallery-item {
+    width: 150px; /* Adjust the width for smaller screens */
+  }
+  #navbar ul li {
+    margin-right: 0.5rem; /* Reduce spacing between navbar items on smaller screens */
+  }
+}
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #ff6b81;
+}
+
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  font-size: 0.9rem;
+}
